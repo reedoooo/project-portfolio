@@ -84,3 +84,50 @@ nav ul li {
     transition: 500ms ease-in-out;
     border:thin solid white;
 }
+
+#addFolders, #deleteFolders {
+    width: 90%;
+    margin: 5% auto;
+    background-color: #797270;
+    border-radius: 6px;
+    padding: 2%;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+#addFolders legend, #deleteFolders legend {
+    color: #C1EDCC;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+
+#addFolders .formDiv, #deleteFolders .formDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+#addFolders label, #deleteFolders label {
+    color: #C1EDCC;
+    width: 30%;
+}
+
+#addFolders input[type='text'], #deleteFolders input[type='text'] {
+    width: 60%;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #453F3C;
+    color: #C1EDCC;
+}
+
+#addFolders input[type='submit'], #deleteFolders input[type='submit'] {
+    width: 50%;
+    margin: 2% auto;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #C1EDCC;
+    color: #453F3C;
+    cursor: pointer;
+}

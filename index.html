@@ -25,6 +25,35 @@
                             <li>Resume</li>
                         </ul>
                     </nav>
+                    <form id='addFolders'>
+                        <fieldset> 
+                          <legend>Add a New Project Folder</legend> 
+                  
+                          <div class='formDiv'>
+                            <label for='folderName'>Folder Name: </label> 
+                            <input type='text' id="name" required>
+                          </div>
+        
+                          <div class='formDiv'>
+                            <label for='folderSRC'>URL: </label> 
+                            <input type='text' id="src" required>
+                          </div>
+                  
+                          <input id='addFolder' type="submit" value="Add Folder">
+                        </fieldset>
+                      </form>
+                      <form id='deleteFolders'>
+                        <fieldset> 
+                          <legend>Delete Folders</legend> 
+                  
+                          <div class='formDiv'>
+                            <label for='folderName'>Folder Name: </label> 
+                            <input type='text' id="name" required>
+                          </div>
+                  
+                          <input id='deleteFolder' type="submit" value="Delete Folder">
+                        </fieldset>
+                      </form>
                 </div>
             </div>
             <div class="folderRow">
