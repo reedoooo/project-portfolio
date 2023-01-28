@@ -1,23 +1,82 @@
 'use strict';
 
+let allFolders = [];
+
 function Folder(name, src) {
   this.name = name;
   this.src = src;
 
+  this.removedFiles = [];
+  console.log(this.removedFiles);
+
+  allFolders.push(this);
 }
 
-function folderSrc(id, url) {
+function folderCreator() {
+  for (let i = 0; i < allFolders.length; i++) {
+    folderLocationClick(allFolders[i].name, allFolders[i].src);
+  }
+}
+
+function folderLocationClick(id, url) {
   document.getElementById(id).addEventListener('click', function () {
     window.location.href = url;
   });
 }
 
-folderSrc('folder1', 'https://reedoooo.github.io/Anime-Website/index.html');
-folderSrc('folder2', 'https://reedoooo.github.io/guessing-game/index.html');
-folderSrc('folder3', 'https://reedoooo.github.io/salmon-cookies/index.html');
-folderSrc('folder4', 'https://reedoooo.github.io/chocolate-pizza/');
-folderSrc('folder5', 'https://reedoooo.github.io/odd-duck-product/index.html');
+let folderContainer = document.getElementsByClassName('folderRow')[0];
 
+Folder.prototype.renderFolder = function () {
+
+  let renderedFolder = document.createElement('button');
+
+  renderedFolder.innerText = this.name;
+  renderedFolder.setAttribute('src', this.src);
+  renderedFolder.setAttribute('id', this.name);
+  renderedFolder.setAttribute('class', 'folder');
+
+  folderContainer.appendChild(renderedFolder);
+
+};
+
+let newFolder = document.getElementById('addFolders');
+
+newFolder.addEventListener('submit', createNewFolder);
+
+function createNewFolder(event) {
+  event.preventDefault();
+
+  let inputOne = event.target.name.value;
+  let inputTwo = event.target.src.value;
+
+  let newFolderValues = new Folder(inputOne, inputTwo);
+
+  allFolders.push(newFolderValues);
+
+  newFolderValues.renderFolder();
+  folderCreator();
+}
+
+let deleteFolder = document.getElementById('deleteFolders');
+
+deleteFolder.addEventListener('submit', this.deleteFolders);
+
+Folder.prototype.deleteFolders = function (event) {
+  event.preventDefault();
+  let removedFile = event.target.name.value;
+  console.log(removedFile);
+
+  this.removedFiles = allFolders.splice(removedFile);
+
+};
+
+allFolders.push(new Folder('folder1', 'https://reedoooo.github.io/Anime-Website/index.html'));
+allFolders.push(new Folder('folder2', 'https://reedoooo.github.io/guessing-game/index.html'));
+allFolders.push(new Folder('folder3', 'https://reedoooo.github.io/salmon-cookies/index.html'));
+allFolders.push(new Folder('folder4', 'https://reedoooo.github.io/chocolate-pizza/'));
+allFolders.push(new Folder('folder5', 'https://reedoooo.github.io/odd-duck-product/index.html'));
+
+folderCreator();
 
 
 // let allFolders = [folderContainer[0].children];
