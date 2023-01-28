@@ -10,12 +10,17 @@
 
 <body>
     <div id="body-div">
+        <div class="left"></div>
         <header>
 
         </header>
         <main>
             <div class="left">
                 <div id="nav-div">
+                    <div class="logo">
+                        <div class="logo-shape"></div>
+                        <div class="logo-text">Coding Progress</div>
+                      </div>
                     <nav>
                         <ul>
                             <li>Home</li>
@@ -26,34 +31,34 @@
                         </ul>
                     </nav>
                     <form id='addFolders'>
-                        <fieldset> 
-                          <legend>Add a New Project Folder</legend> 
-                  
-                          <div class='formDiv'>
-                            <label for='folderName'>Folder Name: </label> 
-                            <input type='text' id="name" required>
-                          </div>
-        
-                          <div class='formDiv'>
-                            <label for='folderSRC'>URL: </label> 
-                            <input type='text' id="src" required>
-                          </div>
-                  
-                          <input id='addFolder' type="submit" value="Add Folder">
+                        <fieldset>
+                            <legend>Add a New Project Folder</legend>
+
+                            <div class='formDiv'>
+                                <label for='folderName'>Folder Name: </label>
+                                <input type='text' id="name" required>
+                            </div>
+
+                            <div class='formDiv'>
+                                <label for='folderSRC'>URL: </label>
+                                <input type='text' id="src" required>
+                            </div>
+
+                            <input id='addFolder' type="submit" value="Add Folder">
                         </fieldset>
-                      </form>
-                      <form id='deleteFolders'>
-                        <fieldset> 
-                          <legend>Delete Folders</legend> 
-                  
-                          <div class='formDiv'>
-                            <label for='folderName'>Folder Name: </label> 
-                            <input type='text' id="name" required>
-                          </div>
-                  
-                          <input id='deleteFolder' type="submit" value="Delete Folder">
+                    </form>
+                    <form id='deleteFolders'>
+                        <fieldset>
+                            <legend>Delete Folders</legend>
+
+                            <div class='formDiv'>
+                                <label for='folderName'>Folder Name: </label>
+                                <input type='text' id="name" required>
+                            </div>
+
+                            <input id='deleteFolder' type="submit" value="Delete Folder">
                         </fieldset>
-                      </form>
+                    </form>
                 </div>
             </div>
             <div class="folderRow">
