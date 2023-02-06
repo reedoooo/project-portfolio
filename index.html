@@ -1,87 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" id="html-id">
 
-        <title>E-Portfolio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <section id="body-div">
-            <div class="left">
+    <title>E-Portfolio</title>
 
-            </div>
-            <header>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iframe.css">
 
-            </header>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- <script src="js/login.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="./js/login.js"></script>
 
-            <main>
-                <aside class="left">
-                    <section id="nav-div">
-                        <section class="logo">
-                            <div class="logo-shape"></div>
-                            <div class="logo-text">Coding Progress</div>
-                        </section>
-                        <nav>
-                            <ul>
-                                <a href="index.html"><li>Home</li></a>
-                                <a href="index.html"><li>Projects</li></a>
-                                <a href="notes.html"><li>Notes</li></a>
-                                <a href="links.html"><li>Coding Resources</li></a>
-                                <a href="resume.html"><li>Resume</li></a>
-                            </ul>
-                        </nav>
-                        <form id='addFolders'>
-                            <fieldset>
-                                <legend>Add a New Project Folder</legend>
 
-                                <section class='formDiv'>
-                                    <label for='folderName'>Folder Name: </label>
-                                    <input type='text' id="name" required>
-                                </section>
+</head>
 
-                                <section class='formDiv'>
-                                    <label for='folderSRC'>URL: </label>
-                                    <input type='text' id="src" required>
-                                </section>
+<body>
+    <section id="body-div">
+        <div class="left">
 
-                                <input id='addFolder' type="submit" value="Add Folder">
-                            </fieldset>
-                        </form>
-                        <form id='deleteFolders'>
-                            <fieldset>
-                                <legend>Delete Folders</legend>
+        </div>
+        <header>
 
-                                <section class='formDiv'>
-                                    <label for='folderName'>Folder Name: </label>
-                                    <input type='text' id="name" required>
-                                </section>
+        </header>
 
-                                <input id='deleteFolder' type="submit" value="Delete Folder">
-                            </fieldset>
-                        </form>
+        <main>
+            <aside class="left">
+                <section id="nav-div">
+                    <section class="logo">
+                        <div class="logo-shape"></div>
+                        <div class="logo-text" id="logo-id">Coding Progress</div>
                     </section>
-                </aside>
-                <section class="folderRow">
-                    <button class="folder" id="folder1"></button>
-                    <button class="folder" id="folder2"></button>
-                    <button class="folder" id="folder3"></button>
-                    <button class="folder" id="folder4"></button>
-                    <button class="folder" id="folder5"></button>
-                    <button class="folder" id="folder6"></button>
+                    <nav>
+                        <ul>
+                            <a href="login.html">
+                                <li id="li1">Home</li>
+                            </a>
+                            <a href="index.html">
+                                <li id="li2">Projects</li>
+                            </a>
+                            <a href="resume.html">
+                                <li id="li3">Resume</li>
+                            </a>
+                            <a href="notes.html">
+                                <li id="li4">Notes</li>
+                            </a>
+                            <a href="todoList.html">
+                                <li id="li5">To-Do List</li>
+                            </a>
+                            <a href="links.html">
+                                <li id="li6">Coding Resources</li>
+                            </a>
+                            <a href="boredbutton.html">
+                                <li id="li7">Bored Button</li>
+                            </a>
+                            <a href="about.html">
+                                <li id="li8">About Us</li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <form id='addFolders'>
+                        <fieldset id="fieldset-id1">
+                            <legend id="legend-div1">Add a New Project Folder</legend>
+
+                            <section id='formDiv1'>
+                                <label for='title' id="label-form1">Folder Name: </label>
+                                <input type='text' id="title" name="title" placeholder="Title" required>
+                            </section>
+
+                            <section id='formDiv2'>
+                                <label for='deployedPage' id="label-form2">URL: </label>
+                                <input type='text' id="deployedPage" name="deployedPage" placeholder="Deployed page URL"
+                                    required>
+                            </section>
+
+                            <section id="formDiv3">
+                                <label for='folderSRC' id="label-form3">Files: </label>
+                                <input type='file' id="folderSRC" name="folderSRC" webkitdirectory multiple required>
+                            </section>
+
+                            <input id='addFolder' type="submit" value="Add Folder">
+                        </fieldset>
+                    </form>
+                    <form id='deleteFolders'>
+                        <fieldset id="fieldset-id2">
+                            <legend id="legend-div2">Delete Folders</legend>
+
+                            <section id='formDiv4'>
+                                <label for='folderName' id="label-form4">Folder Name:</label>
+                                <input type='text' id="name" placeholder="Title" required>
+                            </section>
+
+                            <input id='deleteFolder' type="submit" value="Delete Folder">
+                        </fieldset>
+                    </form>
+
+                    <form id="submit-button2">
+                        <fieldset id="fieldset-id3">
+                            <legend id="legend-div3">
+                                <div id="login-form1">
+                                <div id="formDiv5">
+
+                                        <input type="submit" id="login-submit2" name="submit" value="Choose" />
+                                        <label for="light-or-dark" id="label-form5">Light</label>
+                                        <input type="radio" class="radio" name="form2" value="light2" unchecked>
+                                        <label for="light-or-dark" id="label-form6">Dark</label>
+                                        <input type="radio" class="radio" name="form2" value="dark2" unchecked>
+                                    </div>
+                                </div>
+                            </legend>
+                        </fieldset>
+                    </form>
+                    <section id="projectFileNavContainer">
+
+                    </section>
                 </section>
-            </main>
-        
-            <footer>
 
-            </footer>
+            </aside>
+            <section class="folderRow" id="folderRow">
+                <!-- populateProjectsList from projects.js will fill this with folder buttons -->
+            </section>
 
-            <script src="js/login.js" type="text/javascript"></script>
-            <script src="js/app.js" type="text/javascript"></script>
-        </section>
-    </body>
+            <div id="iframebox">
+                <div id="textblob">Your file text will appear here</div>
+                <iframe src="" id="webPage" title="Iframe Example"></iframe>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script type="text/javascript" src="./js/app.js"></script>
+        <script type="text/javascript" src="./js/projects.js"></script>
+
+    </section>
+</body>
+
 </html>
