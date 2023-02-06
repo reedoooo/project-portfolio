@@ -1,5 +1,15 @@
 'use strict';
 
+import setTheme from './login.js';
+
+window.addEventListener('load', function () {
+  let savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  }
+});
+
+
 let allFolders = [];
 
 function Folder(name, src) {
@@ -23,6 +33,7 @@ function folderLocationClick(id, url) {
     window.location.href = url;
   });
 }
+
 
 let folderContainer = document.getElementsByClassName('folderRow')[0];
 
@@ -69,6 +80,8 @@ Folder.prototype.deleteFolders = function (event) {
   this.removedFiles = allFolders.splice(removedFile);
 
 };
+
+
 
 allFolders.push(new Folder('folder1', 'https://reedoooo.github.io/Anime-Website/index.html'));
 allFolders.push(new Folder('folder2', 'https://reedoooo.github.io/guessing-game/index.html'));

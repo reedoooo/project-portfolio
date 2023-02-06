@@ -161,7 +161,14 @@ nav a {
     cursor: pointer;
 }
  
-@page {
-    size: 5.5in 8.5in portrait;
-    margin: 20%;
-}
+#pdfPreview {
+    border: 1px solid gray;
+    margin-top: 20px;
+  }
+
+  #pdfViewer {
+    display:flex;
+    float:right;
+    height:auto;
+    width:auto;
+  }
