@@ -59,10 +59,16 @@ nav ul li {
     padding: 5%;
     text-align: center;
     border-bottom:  solid ivory;
-
     color:#C1EDCC;
 }
 
+nav ul li:hover {
+    background-color: #797270;
+}
+
+nav a {
+    text-decoration: none;
+}
 
 .folderRow {
     display: flex;
@@ -154,4 +160,15 @@ nav ul li {
     color: #453F3C;
     cursor: pointer;
 }
+ 
+#pdfPreview {
+    border: 1px solid gray;
+    margin-top: 20px;
+  }
 
+  #pdfViewer {
+    display:flex;
+    float:right;
+    height:auto;
+    width:auto;
+  }
